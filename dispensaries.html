@@ -184,7 +184,7 @@
                                     }
                                     marker.street_address = dispensary.street_address;
                                     marker.city_address = dispensary.city_address;
-                                    markers.append(marker);
+                                    markers.push(marker);
                                     bindInfoWindow(marker, map, dispensary);
                                 }
                             }
@@ -212,10 +212,12 @@
                         google.maps.event.addListener(map, "click", function() {
                             iw.close();
                         });
-                        google.maps.event.addListener(map, "bounds_changed", function() {
+                        google.maps.event.addListener(map, "idle", function() {
+                            var list = $('#dispensary-list');
+                            list.html('');
                             for(var i = markers.length, bounds = map.getBounds(); i--;) {
                                 if( bounds.contains(markers[i].getPosition()) ){
-                                    // code for showing your object
+                                    list.append('<li>' + markers[i].title + '</li>');
                                 }
                             }
                         });
@@ -252,7 +254,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; MONDO 2015</p>
+                    <p>Copyright &copy; MONDO 2016</p>
                     <p><small>MONDO operates in full compliance with WA State laws 69.51A RCW, SB5073, and 5052, and CA State law HSB 11362.5</small></p>
                 </div>
             </div>
