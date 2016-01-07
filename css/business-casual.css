@@ -222,3 +222,44 @@ footer p {
 hr:first-child {
     margin-top: 10px;
 }
+
+#dispensarymap {
+    height:400px;
+    width:100%;
+    margin-bottom: 20px;
+}
+.gm-style-iw * {
+    display: block;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+#dispensary-list {
+    padding: 0px;
+    margin: 0 -15px;
+    pointer-events: none;
+    height:400px;
+    background: no-repeat center;
+}
+#dispensary-list li {
+    display: block;
+    list-style-type: none;
+    background-color: #fdfdfd;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer; cursor: hand;
+}
+#dispensary-list li:hover {
+    background-color: #d0d0d0;
+}
+#dispensary-list li:active {
+    background-color: #ffffff;
+}
+#dispensary-list li h3 {
+    font-size: 1.2em;
+    margin: 0px;
+}
