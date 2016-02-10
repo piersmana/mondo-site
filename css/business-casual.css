@@ -59,10 +59,15 @@ hr {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 .navbar-header {
 	background: rgba(245,245,245,0.9) url('../img/brown-bg.png');
+}
+
+.nav>li {
+    display: inline-block;
 }
 
 .img-full {
@@ -195,7 +200,7 @@ footer p {
     }
 
     .nav>li>a {
-        padding: 35px;
+        padding: 35px 30px;
     }
 
     .navbar-nav>li>a {
@@ -208,6 +213,10 @@ footer p {
         margin: 0 auto;
         table-layout: fixed;
         font-size: 1.25em;
+    }
+
+    .navbar-nav>li {
+        float:none;
     }
 }
 
